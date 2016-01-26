@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/styles.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Muli"/>
+    <link rel="stylesheet" href="../../static/css/jquery.bxslider.css"/>
+  </head>
+  <body>
+    <div class="cnt-wrapper">
+      <header>
+        <div class="cnt-general">
+          <nav>
+            <ul>
+              <li><a href="">Nosotros</a></li>
+              <li><a href="/templates/html/predicas.html">Predicas</a></li>
+              <li><a href="">Eventos</a></li>
+              <li class="cnt-logo"></li>
+              <li><a href="/templates/html/contacto.html">Contacto</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Suscribite</a></li>
+            </ul>
+          </nav><a href="/templates/html/index.html" class="logo"><img src="../../static/img/logo.png" alt="" height="100" width="120"/></a>
+        </div>
+      </header>
+      <section class="cnt-slider">
+        <div class="sliders">
+          <div class="slide">
+            <div class="capa-overlay"></div>
+            <div class="cnt-general">
+              <div class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto</div>
+            </div>
+            <div style="background-image:url('../../static/img/slide.png')" class="imagen"></div>
+          </div>
+          <div class="slide">
+            <div class="cnt-general">
+              <div class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto</div>
+            </div>
+            <div class="capa-overlay"></div>
+            <div style="background-image:url('../../static/img/slide.png')" class="imagen"></div>
+          </div>
+          <div class="slide">
+            <div class="cnt-general">
+              <div class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto</div>
+            </div>
+            <div class="capa-overlay"></div>
+            <div style="background-image:url('../../static/img/mensaje.jpg')" class="imagen"></div>
+          </div>
+        </div>
+      </section>
+      <section class="cnt-ultimas-predicas">
+        <div class="cnt-general">
+          <h2 class="section-titulo c-rojo">Ultimas Predicas</h2>
+          <div class="ultimas-predicas">
+            <div class="item">
+              <div class="titulo-predica">
+                <h3>Predica 1</h3>
+              </div><a href="" class="cnt-img"><img src="../../static/img/slide.png" alt="" width="280" height="200"/></a>
+              <div class="texto">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                </p><a href="">ver mas</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="titulo-predica">
+                <h3>Predica 1</h3>
+              </div><a href="" class="cnt-img"><img src="../../static/img/mensaje.jpg" alt="" width="280" height="200"/></a>
+              <div class="texto">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                </p><a href="">ver mas</a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="titulo-predica">
+                <h3>Predica 1</h3>
+              </div><a href="" class="cnt-img"><img src="../../static/img/slide.png" alt="" width="280" height="200"/></a>
+              <div class="texto">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                </p><a href="">ver mas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cnt-nuestros-eventos">
+        <div style="background-image:url('../../static/img/jovenes.jpg')" class="cnt-fondo-img">
+          <div class="capa-overlay"></div>
+          <div class="cnt-general">
+            <h2 class="section-titulo">Nuestros Eventos</h2>
+            <div class="cnt-texto">
+              <div class="texto-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia sit molestiae sed earum voluptate recusandae autem expedita molestias nulla aliquam deserunt vero, quisquam id, dolorum facilis dolorem repellendus nihil?</p>
+              </div>
+              <div class="texto-right">
+                <div class="evento"><a href="">Evento 1</a>
+                  <div class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                  </div>
+                </div>
+                <div class="evento"><a href="">Evento 1</a>
+                  <div class="texto">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-top"></div>
+        <div class="footer-bottom">
+          <div class="cnt-general">
+            <div class="texto-left">©2016-Todos los derechos reservados.</div>
+            <div class="texto-right">Diseñado por test</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../static/js/jquery-2.2.0.min.js"></script>
+    <script src="../../static/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.sliders').bxSlider({
+              auto:true,
+              pause:'7000',
+              minSlides: 1,
+              maxSlides: 1,
+              moveSlides: 1,
+              slideMargin: 0,
+              controls: false,
+              pager : true
+          });
+      });
+    </script>
+  </body>
+</html>

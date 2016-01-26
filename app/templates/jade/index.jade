@@ -1,0 +1,100 @@
+extends ./base.jade
+block  css
+    link(rel="stylesheet", href="../../static/css/jquery.bxslider.css")
+block content
+    section.cnt-slider
+        .sliders
+            .slide
+                .capa-overlay
+                .cnt-general
+                    .texto.
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto
+                .imagen(style="background-image:url('../../static/img/slide.png')")
+            .slide
+                .cnt-general
+                    .texto.
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto
+                .capa-overlay
+                .imagen(style="background-image:url('../../static/img/slide.png')")
+            .slide
+                .cnt-general
+                    .texto.
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto
+                .capa-overlay
+                .imagen(style="background-image:url('../../static/img/mensaje.jpg')")
+    section.cnt-ultimas-predicas
+        .cnt-general
+            h2.section-titulo.c-rojo.
+                Ultimas Predicas
+            .ultimas-predicas
+                .item
+                    .titulo-predica
+                        h3 Predica 1
+                    a(href="").cnt-img
+                        img(src="../../static/img/slide.png", alt="", width="280", height="200")
+                    .texto
+                        p.
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                        a(href="") ver mas
+                .item
+                    .titulo-predica
+                        h3 Predica 1
+                    a(href="").cnt-img
+                        img(src="../../static/img/mensaje.jpg", alt="", width="280", height="200")
+                    .texto
+                        p.
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                        a(href="") ver mas
+                .item
+                    .titulo-predica
+                        h3 Predica 1
+                    a(href="").cnt-img
+                        img(src="../../static/img/slide.png", alt="", width="280", height="200")
+                    .texto
+                        p.
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
+                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
+                        a(href="") ver mas
+    section.cnt-nuestros-eventos
+        .cnt-fondo-img(style="background-image:url('../../static/img/jovenes.jpg')")
+            .capa-overlay
+            .cnt-general
+                h2.section-titulo.
+                    Nuestros Eventos
+                .cnt-texto
+                    .texto-left
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia sit molestiae sed earum voluptate recusandae autem expedita molestias nulla aliquam deserunt vero, quisquam id, dolorum facilis dolorem repellendus nihil?
+                    .texto-right
+                        .evento
+                            a(href="").
+                                Evento 1
+                            .texto.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                        .evento
+                            a(href="").
+                                Evento 1
+                            .texto.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+block js
+    script(src="../../static/js/jquery.bxslider.min.js")
+    script(type='text/javascript').
+        $(document).ready(function(){
+            $('.sliders').bxSlider({
+                auto:true,
+                pause:'7000',
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 0,
+                controls: false,
+                pager : true
+            });
+        });

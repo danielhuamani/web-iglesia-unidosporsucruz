@@ -1,0 +1,35 @@
+extends ./base.jade
+block content
+    section.cnt-mapa
+        #googleMap
+    section.cnt-contacto
+        .cnt-general
+            h2.section-titulo.
+                Contacto
+            .cnt-formulario
+                form(action="")
+                        .cnt-input
+                            input(type="text", placeholder="Nombre")
+                        .cnt-input
+                            input(type="text", placeholder="Email")
+                        .cnt-input
+                            input(type="text", placeholder="Telefono")
+                        .cnt-input
+                            textarea(placeholer="Mensaje", name="", cols="30", rows="10")
+
+block js
+    script(src="http://maps.googleapis.com/maps/api/js")
+    script.
+        function initialize() {
+            var mapProp = {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:16,
+            mapTypeId:google.maps.MapTypeId.ROADMAP,
+            mapTypeControl   : true,
+            //- disableDefaultUI : true,
+            zoomControl      : false,
+            scrollwheel      : false,
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
