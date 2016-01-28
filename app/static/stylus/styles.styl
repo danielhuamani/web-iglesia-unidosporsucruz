@@ -31,6 +31,13 @@ h2.section-titulo
     margin 30px 0px
 
     text-align center
+.contenido
+  max-width 600px
+  margin auto
+  text-align center
+  font-size 16px
+  font-family muli
+  margin-bottom 40px
 .c-rojo
   color c-rojo
 /*++++++++++++++HEADER++++++++++*/
@@ -40,7 +47,25 @@ header
     height 112px
     box-shadow 0px 2px 6px c-plomo
     .cnt-general
+        position relative
         height 100%
+        .redes
+          position absolute
+          top 5px
+          right 0px
+          ul
+            display flex
+            li
+              margin 0px 10px
+              a
+                font-size 20px
+              .faceboox
+                color #46629E
+
+              .twitter
+                color #55acee
+              .youtube
+                color #cc181e
         nav
             height 100%
             ul
@@ -70,8 +95,64 @@ header
                 display block
                 width 100%
                 height auto
-
-
+.overlay
+  background c-negro
+  width 100%
+  height 100%
+  position fixed
+  top 0px
+  left 0px
+  z-index -1
+  opacity 0
+  display block
+  transition 0.3s ease all
+.overlay-block
+  opacity 0.7 !important
+  z-index 30 !important
+.cnt-suscribirse-block
+  z-index 40 !important
+  opacity 1 !important
+.cnt-suscribirse
+  transition 0.3s ease all
+  max-width 600px
+  z-index -1
+  opacity 0
+  position fixed
+  left 0px
+  right 0px
+  top 20%
+  border-radius 5px
+  margin auto
+  width 96%
+  background c-blanco
+  padding 20px 10px
+  text-align center
+  .cnt-general
+    position relative
+  .cerrar-suscribirse
+    position absolute
+    top 0px
+    right 0px
+    z-index 40
+    cursor pointer
+    font-size 32px
+    transition 0.2s ease all
+    transform rotate(0) scale(1)
+    &:hover
+      color c-rojo
+      transform rotate(0) scale(1.1)
+  .cnt-formulario
+    margin-top 20px
+  .cnt-input
+    input
+      width 80% !important
+  h2
+    color c-negro
+    font-family lato
+    margin-bottom 20px
+  p
+    color c-negro
+    font-family muli
 footer
   .footer-bottom
     padding 5px 0px
@@ -306,6 +387,7 @@ section.cnt-predicas
 
 
 section.cnt-predica
+  margin-bottom 40px
   .cnt-texto
     font-size 16px
     color c-negro
@@ -328,9 +410,106 @@ section.cnt-predica
   .cnt-audio
     margin-top 20px
     text-align center
-    margin-bottom 40px
+  .cnt-facebook
+    margin-top 20px
+    text-align center
 
 /*¨*******MPA*/
 #googleMap
   width 100%
   height 360px
+ section.cnt-contacto
+   margin-bottom 60px
+.cnt-formulario
+  form
+    max-width 600px
+    margin auto
+    button
+      font-size 18px
+      font-family lato
+      background c-rojo
+      border none
+      color c-blanco
+      padding 8px 15px
+      cursor pointer
+      border-radius 4px
+    .cnt-input
+      width 100%
+      margin 10px 0px
+      input
+        outline-color c-plomo-oscuro
+        color c-rojo
+        padding-left 5px
+        width 100%
+        height 28px
+        border 2px solid c-rojo
+        border-radius 4px
+        font-size 16px
+        &:focus
+          border 1px solid c-rojo
+      textarea
+        outline-color c-plomo-oscuro
+        color c-rojo
+        padding-left 5px
+        padding-top 5px
+        width 100%
+        font-size 16px
+        font-family muli
+        border 2px solid c-rojo
+        border-radius 4px
+
+/************EVENTOS***************/
+.cnt-eventos
+  .eventos
+    display flex
+    flex-wrap wrap
+    .item:hover
+      transform rotate(0) scale(1.1)
+    .item
+      max-width 800px
+      box-shadow 0 1px 5px #777
+      margin auto
+      margin-bottom 40px
+      max-width 100%
+      transition .3s ease all
+      .titulo
+        border-bottom 2px solid c-rojo
+        padding 5px 10px
+        display flex
+        justify-content space-between
+        h2
+          display inline-block
+          color c-negro
+          font-size 20px
+          font-family lato
+          max-width 60%
+        h3
+          display inline-block
+          color c-negro
+          max-width 30%
+          font-size 16px
+          font-family lato
+      .cnt-texto
+        display flex
+        .enlace-texto
+          padding 10px
+          max-width 500px
+          margin-right 20px
+
+          .texto
+            font-family muli
+            font-size 14px
+          a
+            display block
+            margin-top 10px
+            color c-rojo
+            font-family muli
+            transition 0.3s ease all
+            &:hover
+              text-decoration underline
+        figure
+          max-width 300px
+
+          img
+            display block
+

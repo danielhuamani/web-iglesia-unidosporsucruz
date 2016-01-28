@@ -11,15 +11,38 @@
     <div class="cnt-wrapper">
       <header>
         <div class="cnt-general">
+          <div class="overlay"></div>
+          <div class="cnt-suscribirse">
+            <div class="cnt-general">
+              <div class="cerrar-suscribirse icon-cancel-circle"></div>
+              <h2>Suscribirse</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt repudiandae nihil consectetur voluptatem autem enim, ab aspernatur voluptate, vero cum tempora illo sunt dolores, natus atque possimus eius ullam pariatur!</p>
+              <div class="cnt-formulario">
+                <form action="">
+                  <div class="cnt-input">
+                    <input type="email" placeholder="Email"/>
+                  </div>
+                  <button>Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="redes">
+            <ul>
+              <li><a href="" class="icon-facebook faceboox"></a></li>
+              <li><a href="" class="icon-twitter twitter"></a></li>
+              <li><a href="" class="icon-youtube youtube"></a></li>
+            </ul>
+          </div>
           <nav>
             <ul>
               <li><a href="">Nosotros</a></li>
               <li><a href="/templates/html/predicas.html">Predicas</a></li>
-              <li><a href="">Eventos</a></li>
+              <li><a href="/templates/html/eventos.html">Eventos</a></li>
               <li class="cnt-logo"></li>
               <li><a href="/templates/html/contacto.html">Contacto</a></li>
               <li><a href="">Blog</a></li>
-              <li><a href="">Suscribite</a></li>
+              <li><a href="#" id="suscribir">Suscribirse</a></li>
             </ul>
           </nav><a href="/templates/html/index.html" class="logo"><img src="../../static/img/logo.png" alt="" height="100" width="120"/></a>
         </div>
@@ -130,6 +153,7 @@
       </footer>
     </div>
     <script src="../../static/js/jquery-2.2.0.min.js"></script>
+    <script src="../../static/js/main.js"></script>
     <script src="../../static/js/jquery.bxslider.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){

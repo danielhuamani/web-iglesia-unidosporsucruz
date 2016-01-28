@@ -1,5 +1,7 @@
 extends ./base.jade
 block content
+    #fb-root
+
     section.cnt-banner
         .banner
             .capa-overlay
@@ -27,3 +29,15 @@ block content
                 <audio src="daniel.mp3" controls  loop>
                 <p>Tu navegador no implementa el elemento audio.</p>
                 </audio>
+            .cnt-facebook
+                .fb-like(data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true")
+
+block js
+    script.
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=579887472112702";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
