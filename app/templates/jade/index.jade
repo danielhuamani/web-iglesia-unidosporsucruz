@@ -36,7 +36,9 @@ block content
                         p.
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                        a(href="") ver mas
+                        .link
+                            a(href="") ver mas
+                            a(href="") ver video
                 .item
                     .titulo-predica
                         h3 Predica 1
@@ -46,7 +48,9 @@ block content
                         p.
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                        a(href="") ver mas
+                        .link
+                            a(href="") ver mas
+                            a(href="") ver video
                 .item
                     .titulo-predica
                         h3 Predica 1
@@ -56,7 +60,9 @@ block content
                         p.
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                        a(href="") ver mas
+                        .link
+                            a(href="") ver mas
+                            a(href="") ver video
     section.cnt-nuestros-eventos
         .cnt-fondo-img(style="background-image:url('../../static/img/jovenes.jpg')")
             .capa-overlay
@@ -83,8 +89,35 @@ block content
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+    section.cnt-mapa
+        .cnt-general
+            h2.section-titulo.c-rojo.
+                ¿Cómo ubicarnos?
+            .cnt-texto-mapa
+                .contactanos
+                    .cnt-datos
+                        .cnt-col
+                            h4.
+                                <span>Direccion:</span> Av Palmas Reales
+                        .cnt-col
+                            h4.
+                                <span>Servicios:</span> Domingos 9:00am y 12:00pm
+                        .cnt-col
+                            h4.
+                                <span>Telefono:</span> 94658458 - 548584
+                        .cnt-col
+                            h4.
+                                <span>Redes:</span>
+                                <a href="" class="icon-facebook faceboox"></a>
+                                <a href="" class="icon-twitter twitter"></a>
+                                <a href="" class="icon-youtube youtube"></a>
+                    figure
+                        img(src="../../static/img/mensaje.jpg", alt="")
+
+                #mapa-google
 block js
     script(src="../../static/js/jquery.bxslider.min.js")
+    script(src="http://maps.googleapis.com/maps/api/js")
     script(type='text/javascript').
         $(document).ready(function(){
             $('.sliders').bxSlider({
@@ -98,3 +131,17 @@ block js
                 pager : true
             });
         });
+    script.
+        function initialize() {
+            var mapProp = {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:16,
+            mapTypeId:google.maps.MapTypeId.ROADMAP,
+            mapTypeControl   : true,
+            //- disableDefaultUI : true,
+            zoomControl      : false,
+            scrollwheel      : false,
+          };
+          var map=new google.maps.Map(document.getElementById("mapa-google"), mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);

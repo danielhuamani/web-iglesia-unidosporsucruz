@@ -46,28 +46,35 @@
           </nav><a href="/templates/html/index.html" class="logo"><img src="../../static/img/logo.png" alt="" height="100" width="120"/></a>
         </div>
       </header>
-      <section class="cnt-mapa">
-        <div id="googleMap"></div>
+      <section class="cnt-banner">
+        <div class="banner">
+          <div class="capa-overlay"></div>
+          <div class="cnt-general">
+            <div class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia laborum aperiam iusto</div>
+          </div>
+          <div style="background-image:url('../../static/img/slide.png')" class="imagen"></div>
+        </div>
       </section>
-      <section class="cnt-contacto">
+      <section class="cnt-nosotros">
         <div class="cnt-general">
-          <h2 class="section-titulo">Contacto</h2>
-          <div class="cnt-formulario">
-            <form action="">
-              <div class="cnt-input">
-                <input type="text" placeholder="Nombre"/>
-              </div>
-              <div class="cnt-input">
-                <input type="text" placeholder="Email"/>
-              </div>
-              <div class="cnt-input">
-                <input type="text" placeholder="Telefono"/>
-              </div>
-              <div class="cnt-input">
-                <textarea placeholder="Mensaje" name="" cols="30" rows="10"></textarea>
-              </div>
-              <button>Enviar</button>
-            </form>
+          <div class="texto">
+            <h1>Mision</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus temporibus repellat id deserunt soluta eligendi optio possimus exercitationem quibusdam amet autem iste corporis natus voluptatum expedita vitae voluptate, excepturi error.</p>
+            <h2>
+              Vision
+              
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus temporibus repellat id deserunt soluta eligendi optio possimus exercitationem quibusdam amet autem iste corporis natus voluptatum expedita vitae voluptate, excepturi error.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae debitis animi veniam, delectus quod rerum culpa eum perferendis dolorem dolor provident cumque beatae. Assumenda dolores nam veniam, numquam. Quia, repellendus.</p>
+            <h3>
+              test
+              
+            </h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, iure, nulla! Quibusdam ut vel nihil, laudantium cupiditate</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, iure, nulla! Quibusdam ut vel nihil, laudantium cupiditate nesciunt natus</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, iure, nulla! Quibusdam ut vel nihil, laudantium cupiditate nesciunt natus</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -83,21 +90,5 @@
     </div>
     <script src="../../static/js/jquery-2.2.0.min.js"></script>
     <script src="../../static/js/main.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-          var mapProp = {
-          center:new google.maps.LatLng(51.508742,-0.120850),
-          zoom:16,
-          mapTypeId:google.maps.MapTypeId.ROADMAP,
-          mapTypeControl   : true,
-          //- disableDefaultUI : true,
-          zoomControl      : false,
-          scrollwheel      : false,
-        };
-        var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
   </body>
 </html>

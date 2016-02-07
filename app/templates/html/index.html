@@ -36,7 +36,7 @@
           </div>
           <nav>
             <ul>
-              <li><a href="">Nosotros</a></li>
+              <li><a href="/templates/html/nosotros.html">Nosotros</a></li>
               <li><a href="/templates/html/predicas.html">Predicas</a></li>
               <li><a href="/templates/html/eventos.html">Eventos</a></li>
               <li class="cnt-logo"></li>
@@ -84,7 +84,8 @@
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                </p><a href="">ver mas</a>
+                </p>
+                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
               </div>
             </div>
             <div class="item">
@@ -95,7 +96,8 @@
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                </p><a href="">ver mas</a>
+                </p>
+                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
               </div>
             </div>
             <div class="item">
@@ -106,7 +108,8 @@
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
-                </p><a href="">ver mas</a>
+                </p>
+                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
               </div>
             </div>
           </div>
@@ -142,6 +145,36 @@
           </div>
         </div>
       </section>
+      <section class="cnt-mapa">
+        <div class="cnt-general">
+          <h2 class="section-titulo c-rojo">¿Cómo ubicarnos?</h2>
+          <div class="cnt-texto-mapa">
+            <div class="contactanos">
+              <div class="cnt-datos">
+                <div class="cnt-col">
+                  <h4><span>Direccion:</span> Av Palmas Reales</h4>
+                </div>
+                <div class="cnt-col">
+                  <h4><span>Servicios:</span> Domingos 9:00am y 12:00pm</h4>
+                </div>
+                <div class="cnt-col">
+                  <h4><span>Telefono:</span> 94658458 - 548584</h4>
+                </div>
+                <div class="cnt-col">
+                  <h4>
+                    <span>Redes:</span>
+                    <a href="" class="icon-facebook faceboox"></a>
+                    <a href="" class="icon-twitter twitter"></a>
+                    <a href="" class="icon-youtube youtube"></a>
+                  </h4>
+                </div>
+              </div>
+              <figure><img src="../../static/img/mensaje.jpg" alt=""/></figure>
+            </div>
+            <div id="mapa-google"></div>
+          </div>
+        </div>
+      </section>
       <footer>
         <div class="footer-top"></div>
         <div class="footer-bottom">
@@ -155,6 +188,7 @@
     <script src="../../static/js/jquery-2.2.0.min.js"></script>
     <script src="../../static/js/main.js"></script>
     <script src="../../static/js/jquery.bxslider.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
           $('.sliders').bxSlider({
@@ -168,6 +202,21 @@
               pager : true
           });
       });
+    </script>
+    <script>
+      function initialize() {
+          var mapProp = {
+          center:new google.maps.LatLng(51.508742,-0.120850),
+          zoom:16,
+          mapTypeId:google.maps.MapTypeId.ROADMAP,
+          mapTypeControl   : true,
+          //- disableDefaultUI : true,
+          zoomControl      : false,
+          scrollwheel      : false,
+        };
+        var map=new google.maps.Map(document.getElementById("mapa-google"), mapProp);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </body>
 </html>

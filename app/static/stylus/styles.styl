@@ -41,6 +41,13 @@ h2.section-titulo
 .c-rojo
   color c-rojo
 /*++++++++++++++HEADER++++++++++*/
+.faceboox
+  color #46629E
+
+.twitter
+  color #55acee
+.youtube
+  color #cc181e
 header
     position relative
     background c-blanco
@@ -59,13 +66,7 @@ header
               margin 0px 10px
               a
                 font-size 20px
-              .faceboox
-                color #46629E
 
-              .twitter
-                color #55acee
-              .youtube
-                color #cc181e
         nav
             height 100%
             ul
@@ -278,6 +279,9 @@ section.cnt-ultimas-predicas
           font-size 14px
           font-family muli
           color c-negro
+        .link
+          display flex
+          justify-content space-between
         a
           display block
           margin-top 10px
@@ -342,7 +346,38 @@ section.cnt-nuestros-eventos
             font-family muli
             text-shadow 5px 6px 5px #000
 
-
+section.cnt-mapa
+  .cnt-texto-mapa
+    display flex
+    justify-content space-between
+    margin-bottom 40px
+  .contactanos
+    margin-right 20px
+    width 45%
+    .cnt-datos
+      .cnt-col
+        display flex
+        margin-bottom 20px
+        justify-content space-around
+        h4
+          font-family lato
+          width 100%
+          font-size 16px
+          span
+            color c-rojo
+          a
+            font-size 28px
+            margin 0px 8px
+    figure
+      margin auto
+      margin-top 20px
+      max-width 100%
+      img
+        width 100%
+        height auto
+        display block
+  #mapa-google
+    width 45%
 
 /**********PREDICAS**********/
 section.cnt-banner
@@ -418,8 +453,8 @@ section.cnt-predica
 #googleMap
   width 100%
   height 360px
- section.cnt-contacto
-   margin-bottom 60px
+section.cnt-contacto
+  margin-bottom 60px
 .cnt-formulario
   form
     max-width 600px
@@ -512,4 +547,30 @@ section.cnt-predica
 
           img
             display block
+
+/*NOSOTROS*/
+ section.cnt-nosotros
+   margin-top 40px
+   margin-bottom 40px
+   .texto
+
+     h1, h2
+       margin 15px 0px
+       font-family lato
+       color c-rojo
+       font-size 22px
+    h3
+      font-family lato
+      font-size 18px
+      margin 10px 0px
+    p
+      font-family muli
+      font-size 16px
+      margin 10px 0px
+    ul
+      margin-left 20px
+      li
+        font-size 16px
+        font-family muli
+        list-style-type disc
 
