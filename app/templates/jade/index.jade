@@ -37,7 +37,7 @@ block content
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                         .link
-                            a(href="") ver mas
+                            a(href="/templates/html/predica-detalle.html") ver mas
                             a(href="", data-video="https://www.youtube.com/embed/aa6rozdTeMw?list=PLhVQdfaGnBq48wL8L1d7rZ5ofGVq5WsKG").ver-video ver video
                 .item
                     .titulo-predica
@@ -49,7 +49,7 @@ block content
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                         .link
-                            a(href="") ver mas
+                            a(href="/templates/html/predica-detalle.html") ver mas
                             a(href="", data-video="https://www.youtube.com/embed/ziuCSk7wbVQ").ver-video ver video
                 .item
                     .titulo-predica
@@ -61,7 +61,7 @@ block content
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                         .link
-                            a(href="") ver mas
+                            a(href="/templates/html/predica-detalle.html") ver mas
                             a(href="", data-video="https://www.youtube.com/embed/aa6rozdTeMw?list=PLhVQdfaGnBq48wL8L1d7rZ5ofGVq5WsKG").ver-video ver video
     section.cnt-nuestros-eventos
         .cnt-fondo-img(style="background-image:url('../../static/img/jovenes.jpg')")
@@ -139,9 +139,15 @@ block js
                 event.preventDefault()
                 var url_video = $(this).attr("data-video")
                 $("iframe").attr("src", url_video)
+                setTimeout(function(){
                 $(".overlay").addClass('overlay-block')
                 $("section.cnt-video-pop-up").addClass("cnt-video-pop-up-block")
+                }, 500);
 
+            });
+            $(".cerrar-iframe").click(function(event) {
+                $(".overlay").removeClass('overlay-block')
+                $("section.cnt-video-pop-up").removeClass("cnt-video-pop-up-block")
             });
         });
     script.
