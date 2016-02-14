@@ -85,7 +85,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                 </p>
-                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
+                <div class="link"><a href="">ver mas</a><a href="" data-video="https://www.youtube.com/embed/aa6rozdTeMw?list=PLhVQdfaGnBq48wL8L1d7rZ5ofGVq5WsKG" class="ver-video">ver video</a></div>
               </div>
             </div>
             <div class="item">
@@ -97,7 +97,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                 </p>
-                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
+                <div class="link"><a href="">ver mas</a><a href="" data-video="https://www.youtube.com/embed/ziuCSk7wbVQ" class="ver-video">ver video</a></div>
               </div>
             </div>
             <div class="item">
@@ -109,7 +109,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibu
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit temporibus perspiciatis
                 </p>
-                <div class="link"><a href="">ver mas</a><a href="">ver video</a></div>
+                <div class="link"><a href="">ver mas</a><a href="" data-video="https://www.youtube.com/embed/aa6rozdTeMw?list=PLhVQdfaGnBq48wL8L1d7rZ5ofGVq5WsKG" class="ver-video">ver video</a></div>
               </div>
             </div>
           </div>
@@ -174,6 +174,14 @@
             <div id="mapa-google"></div>
           </div>
         </div>
+        <section class="cnt-video-pop-up">
+          <div class="cnt-general">
+            <div class="cnt-iframe">
+              <div class="cerrar-iframe icon-cancel-circle"></div>
+              <iframe src="https://www.youtube.com/embed/aa6rozdTeMw?list=PLhVQdfaGnBq48wL8L1d7rZ5ofGVq5WsKG" frameborder="0" width="560" height="315"></iframe>
+            </div>
+          </div>
+        </section>
       </section>
       <footer>
         <div class="footer-top"></div>
@@ -200,6 +208,14 @@
               slideMargin: 0,
               controls: false,
               pager : true
+          });
+          $(".ver-video").click(function(event) {
+              event.preventDefault()
+              var url_video = $(this).attr("data-video")
+              $("iframe").attr("src", url_video)
+              $(".overlay").addClass('overlay-block')
+              $("section.cnt-video-pop-up").addClass("cnt-video-pop-up-block")
+      
           });
       });
     </script>

@@ -113,6 +113,39 @@ header
 .cnt-suscribirse-block
   z-index 40 !important
   opacity 1 !important
+section.cnt-video-pop-up
+  opacity 0
+  z-index -1
+  position fixed
+  left 0px
+  right 0px
+  top 0
+  bottom 0
+  display flex
+  .cnt-general
+    .cnt-iframe
+      position relative
+      margin auto
+      max-width 560px
+      border 15px solid c-blanco
+      .cerrar-iframe
+        right -35px
+        top -35px
+        cursor pointer
+        color white
+        border-radius 50%
+        position absolute
+        font-size 36px
+        background c-negro
+        transition 0.4s ease all
+        &:hover
+          background white
+          color c-rojo
+      iframe
+        display block
+section.cnt-video-pop-up-block
+  z-index 40 !important
+  opacity 1 !important
 .cnt-suscribirse
   transition 0.3s ease all
   max-width 600px
